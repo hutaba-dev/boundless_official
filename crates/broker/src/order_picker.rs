@@ -644,8 +644,8 @@ where
             tracing::debug!("Removing under priced order {order_id}");
             return Ok(Skip);
         }
-
-        let target_timestamp_secs = if mcycle_price_min >= config_min_mcycle_price {
+        let target_timestamp_secs =0;
+/*        let target_timestamp_secs = if mcycle_price_min >= config_min_mcycle_price {
             tracing::info!(
                 "Selecting order {order_id} at price {} - ASAP",
                 format_ether(U256::from(order.request.offer.minPrice))
@@ -660,7 +660,7 @@ where
                 "Order {order_id} minimum profitable price: {} ETH",
                 format_ether(target_min_price)
             );
-
+*/
             order
                 .request
                 .offer
